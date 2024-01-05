@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="10-dom-exercises.css">
+    <title>Exercises</title>
+</head>
+<body>
+    <h1><center>CODING CHALLENGE!</center></h1>
+    <div class="container">
+        <div class="content">
+            <p>Amazon Button</p>
+            <div style="background: white; padding: 10px; margin-top: 5px; margin-right: 20px;">
+            <button class="btn">Add to Cart</button>
+        </div>
+        </div>
+        <div class="content second">
+            <p>Uber buttons</p>
+            <div style="background: white; padding: 10px; margin-top: 5px;">
+            <button class="btn1">Request now</button>
+            <button class="btn2">Schedule for later</button>
+        </div>
+        </div>
+    </div>
+
+    <button class="js-button">Test</button>
+
+    <div>
+        <button onclick="
+        buttonElement('.js-btn');
+            " class="js-btn toggle-button">Gaming</button>
+    </div>
+    <div style="background: white; padding: 10px; margin-top: 5px; width: fit-content;">
+        <button onclick="
+        buttonElement('.js-btn1');
+            " class="js-btn1 toggle-button">Gaming</button>
+        <button onclick="buttonElement('.js-btn2');" class="js-btn2 toggle-button">Music</button>
+        <button onclick="buttonElement('.js-btn3');" class="js-btn3 toggle-button">Tech</button>
+    </div>
+
+
+    <div style="background: white; padding: 10px; margin-top: 5px; width: fit-content;">
+        <button class="toggle-button button" onclick="
+        toggleButton('.button');
+            ">
+            Code
+        </button>
+        <button class="toggle-button button1" onclick="
+        toggleButton('.button1');
+            ">Work-out</button>
+        <button class="toggle-button button2" onclick="toggleButton('.button2');">Be Free</button>
+    </div>
+
+
+    <p>Amazon Shipping Calculator</p>
+
+    <input type="text" placeholder="Cost of Order" class="inputCost style" onkeydown="
+    handleCostkeydown(event);
+    
+    ">
+    <button class="calculate" onclick="
+    calculateTotal();
+    ">Calculate</button>
+
+
+
+    <p class="js-total value"></p>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure blanditiis commodi vero eligendi inventore aliquam? Quaerat illum ut molestias impedit voluptas atque sunt debitis id unde obcaecati ullam, quam culpa!</p>
+    <script src="10-dom-exercises.js"></script>
+</body>
+</html>

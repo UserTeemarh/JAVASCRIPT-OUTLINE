@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OBJECTS</title>
+</head>
+<body>
+    <h1><center>OBJECTs</center></h1>
+    <!-- 
+        TYPES OF BUILT-IN OBJECT...
+
+        console.log()
+        Math.randome()
+        JSON.stringify()
+        localStorage.setItem()
+     -->
+<!-- JSON Stringify is  used to convert OBJECT to JSON -->
+<!-- while, JSON parse is used to convert JSON to OBJECT -->
+
+<!-- localStorage is used to save value permanently -->
+
+<!-- localStorage only support Strings -->
+
+<!-- setItem save a value in localStorage. while, getItem  call-out value in localStorage -->
+    <script>
+        const product2 = {
+            name: 'shirt'
+        }
+        console.log(JSON.stringify(product2));
+        const jsonstring = JSON.stringify(product2);
+        console.log(JSON.parse(jsonstring));
+
+        
+        // const parseObject = JSON.parse(product2);
+
+
+        // console.log(parseObject);
+
+        // OUTBOXING
+
+        console.log('hello'.length);
+        console.log('hello'.toUpperCase());
+
+        const object1 = {
+            message: 'Hola Simon',
+            price: 500
+        }
+        const object2 = object1;
+        console.log(object1 === object2);
+        console.log(object1);
+
+        // DESTRUCTURING 
+
+
+        const {message, price} = object1;
+        console.log(message);
+        console.log(price);
+
+        // SHORTHAND PROPERTY
+        const object5 = {
+            // message: message
+            message,
+            method() {
+                console.log('Demasiado Facil, Nino! No pregunta')
+            }
+        }
+        console.log(object5);
+        object5.method();
+
+        // SHORTHAND METHOD
+
+        
+    </script>
+</body>
+</html>

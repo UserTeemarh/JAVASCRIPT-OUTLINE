@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercises</title>
+</head>
+<body>
+    <h1><center>Exercises</center></h1>
+    <button class="button1">Start</button>
+    <p>
+        <button class="button2">Start</button>
+    </p>
+    <div>
+        <button class="button3">Add to cart</button>
+        <p class="text"></p>
+    </div>
+    <div>
+        <button onclick="
+            modifyTimeout();
+            ">Add to cart</button>
+            <p class="text2"></p>
+    </div>
+    <div>
+        <button onclick="
+        messages++;
+            ">Add</button>
+        <button onclick="
+        messages--;
+        ">Remove</button>
+    </div>
+
+
+
+    <script>
+        const add = function () {
+            console.log(2 + 3);
+        }
+        add();
+
+        // 12b
+        function runTwice(fun) {
+            fun();
+        }
+
+        runTwice(function() {
+            console.log('12b');
+        });
+        runTwice(add);
+
+        //12c
+
+        const buttonElement = document.querySelector('.button1');
+
+        buttonElement.addEventListener('click', () => {
+            setTimeout(function(){
+                buttonElement.textContent = 'Finished';
+            }, 1000);
+        })
+
+        //12d
+
+        const buttonElement2 = document.querySelector('.button2');
+
+        buttonElement2.addEventListener('click', () => {
+            buttonElement2.textContent = 'Loading';
+            setTimeout(function(){
+                buttonElement2.textContent = 'Finished';
+            }, 1000)
+        })
+
+        //12e
+
+        const buttonElement3 = document.querySelector('.button3');
+        const textElement = document.querySelector('.text');
+
+        buttonElement3.addEventListener('click',() => {
+            textElement.textContent = 'Added';
+
+            setTimeout(function(){
+                textElement.textContent = '';
+            }, 2000)
+        });
+
+        // 12f
+
+        let timeoutId;
+
+        function modifyTimeout() {
+            const text1 = document.querySelector('.text2');
+
+            text1.textContent = 'Added';
+
+            clearTimeout(timeoutId);
+            timeoutId = setTimeout(() =>{
+                text1.textContent = '';
+            }, 2000) 
+        }
+
+        //12g 
+        let messages = 2;
+        setInterval(() =>{
+            if (document.title === 'Exercises') {
+                document.title = `(${messages}) New messages`;
+            } else if (messages === 0) {
+                document.title = `Exercises`;
+            } else if (messages > 0) {
+                document.title = `(${messages}) New messages`;
+            }
+            else {
+                document.title = `Exercises`;
+            }
+           
+        },1000);
+
+        // let messages = 2;
+        // function addTitle() {
+        //     if (document.title === 'App') {
+        //         document.title = `${messages} new messages`
+        //     } else {
+        //         document.title = `${messages} new messages`
+        //     }
+        // }
+        // console.log(messages);
+
+
+    </script>
+</body>
+</html>

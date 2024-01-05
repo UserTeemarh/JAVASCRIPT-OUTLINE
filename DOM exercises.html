@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM EXERCISES</title>
+</head>
+<body>
+    <!-- 01  -->
+    <button>hello world</button>
+    <!-- O2 -->
+    <button class="btn2">hello world</button>
+    <!-- 03 -->
+    <p>
+        <button onclick="
+        ShowText('Heads')
+            ">Heads</button>
+        <button onclick="
+        ShowText('Tails')
+        ">Tails</button>
+        <p class="showText"></p>
+    </p>
+<!-- 04 -->
+    <p>
+        <input type="text" placeholder="Name" class="name" onkeydown="
+        updateKeyDown()
+            ">
+        <button  onclick="
+        inputElement();
+        "
+        >submit</button>
+        <p class="output"></p>
+    </p>
+
+<!-- 05 -->
+    <p>Amazon Shipping Calculator</p>
+
+    <input type="text" placeholder="Cost of Order" class="inputCost" onkeydown="
+    handleCostKeydown(event);
+    
+    ">
+    <button  onclick="
+    calculateTotal();
+    ">Calculate</button>
+
+    <p class="js-total"></p>
+<!-- 06 -->
+<fieldset>
+    <legend></legend>
+    <p>
+        <input type="text" class="typeAlong" onkeyup="
+        TypeAlong();
+            
+            ">
+            <p class="showType"></p>
+    </p>
+</fieldset>
+
+    <button class="btn" onclick="
+    Subscribe('Subscribe')
+    "
+    >Subscribe</button>
+
+
+    <!-- 08 -->
+<fieldset>
+    <legend>Cart Project</legend>
+
+<p>
+
+    <button onclick="
+    updateCartQuantity(cartQuantity);
+    ">
+        Show Quantity
+    </button>
+    <button onclick="
+    updateCartQuantity(1)
+    
+    ">Add to cart</button>
+    <button onclick="
+    updateCartQuantity(2)
+    ">+2</button>
+    <button onclick="
+    updateCartQuantity(3)
+    "> +3
+
+    </button>
+    <button onclick="
+    updateCartQuantity(4)
+    "> +4
+
+    </button>
+    <button onclick="
+    updateCartQuantity(5)
+    "> +5
+
+    </button>
+    <p>
+        <button onclick="
+    updateCartQuantity(-1)
+    
+    ">Remove from cart</button>
+    <button onclick="
+    updateCartQuantity(-2)
+    ">-2</button>
+    <button onclick="
+    updateCartQuantity(-3)
+    "> -3
+
+    </button>
+</fieldset>
+    <p class="cartText"></p>
+</p>
+
+<!-- 09 -->
+<p><i>CALCULATOR</i></p>
+<p class="showCalculator"></p>
+<p>
+    <button onclick="
+   updateCalculation(' 1 ')
+        "
+    >1</button>
+    <button
+    onclick="
+   updateCalculation(' 2 ')
+    ">2</button>
+      <button
+      onclick="
+
+     updateCalculation(' 3 ')
+      ">3</button>
+          <button
+          onclick="
+    
+         updateCalculation(' + ')
+          ">+</button>
+<p>
+    <button onclick="
+   updateCalculation(' 4 ')
+        "
+    >4</button>
+    <button onclick="
+   updateCalculation(' 5 ')
+        "
+    >5</button>
+    <button onclick="
+   updateCalculation(' 6 ')
+        "
+    >6</button>
+    <button onclick="
+   updateCalculation(' - ')
+        "> - </button>
+</p>
+<p>
+    <button onclick="
+   updateCalculation(' 7 ')
+        ">7</button>
+    <button onclick="
+   updateCalculation(' 8 ')
+        ">8</button>
+    <button onclick="
+   updateCalculation(' 9 ')
+        ">9</button>
+    <button onclick="
+   updateCalculation(' * ')
+        ">*</button>
+</p>
+<p>
+    <button onclick="
+   updateCalculation(' 0 ')
+        ">0</button>
+        <button onclick="
+       updateCalculation(' . ')
+            ">.</button>
+            <button  onclick="
+           updateCalculation(eval(calculation));
+           console.log(calculation)
+                "> = </button>
+                <button onclick="
+               updateCalculation(' / ' )
+                    ">/</button>
+</p>
+<p>
+    <button onclick="
+   calculation = '';
+   console.log(calculation)
+        ">clear</button>
+</p>
+    <script>
+// 06
+        function TypeAlong() {
+            const typeAlong = document.querySelector('.typeAlong');
+
+            let reveal = typeAlong.value;
+            document.querySelector('.showType').textContent = `${reveal}`;
+        }
+// 05 
+ function Subscribe(click) {
+    const buttonElement = document.querySelector('.btn');
+
+    if (buttonElement.innerText === 'Subscribe'){
+        buttonElement.innerHTML = 'Subscribed'
+    } else {
+        buttonElement.innerHTML = 'Subscribe';
+    }
+    // buttonElement.textContent = 'Subscribed';
+    // console.log(buttonElement.innerText)
+};  
+// 04
+function calculateTotal() {
+   const inputElement = document.querySelector('.inputCost');
+
+   let cost = Number(inputElement.value) * 100;
+
+   if (cost < 4000) {
+    cost = cost + 1000;
+   }
+
+   document.querySelector('.js-total').innerHTML = `$${cost / 100}`;
+}
+        console.log(document.querySelector('button').innerHTML);
+
+        console.log(document.querySelector('.btn2').innerHTML = 'hello world 2');
+
+
+        // 03
+        function ShowText (review) {
+            const paragraph = document.querySelector('.showText');
+
+            if (review === 'Heads') {
+                paragraph.textContent = 'You chose: Heads';
+            } else if (review === 'Tails') {
+                paragraph.textContent = 'You chose: Tails';
+            }
+        }
+
+
+        // REDO
+        function inputElement () {
+            const inputName = document.querySelector('.name');
+            // const outputText = document.querySelector('.output');
+            let name = inputName.value;
+            console.log(name);
+
+            document.querySelector('.output').textContent = `Your Name is: ${name}`;
+        }
+
+        function updateKeyDown () {
+            // console.log(event);
+
+            if(event.key === 'Enter') {
+                inputElement()
+            }
+
+        }
+
+
+        // 07
+        function handleCostKeydown (event) {
+            // console.log(event);
+            if (event.key === 'Escape' || 'Enter') {
+                calculateTotal();
+            }
+
+        }
+
+        // 08
+
+        let cartQuantity = 0;
+        function updateCartQuantity (input) {
+        if (cartQuantity + input > 10) {
+            document.querySelector('.cartText').textContent = 'Çart is full';
+            return;
+        } else if (cartQuantity + input < 0 ) {
+            document.querySelector('.cartText').textContent ='Not enough items in the Cart';
+            return;
+        } else {
+            cartQuantity += input;
+            document.querySelector('.cartText').textContent =`Cart Quantity: ${cartQuantity}`
+        }
+    }
+
+
+     // 09
+
+        let calculation = '';
+
+        function updateCalculation (value) {
+             calculation += value;
+             console.log(calculation)
+             
+            document.querySelector('.showCalculator').textContent = calculation;
+        
+        }
+
+
+   
+        
+
+   
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

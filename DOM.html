@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Object Model (DOM)</title>
+</head>
+<body>
+    <h1><center>Document Object Model (DOM)</center></h1>
+
+    <button class="btn">Hola!</button>
+    <button class="btn1">hello world</button>
+
+    <!-- 
+        SYNTAX RULES FOR DOM
+
+        It is linked with BODY WEBPAGE
+     -->
+    
+
+
+    <script>
+        const button = document.querySelector('.btn');
+
+        // built-in Object
+        document.title = 'Mi Maestro es Elegante';
+        button.addEventListener('click', function () {
+            console.log('Muchas Gracias')
+        });
+
+        // console.log(document.body.innerHTML);
+
+        
+
+        /*document.body let us get all html element in body tag and put it inside javascript . while, document.querySelector let us get any element from the page and put it inside javascript */
+    </script>
+</body>
+</html>

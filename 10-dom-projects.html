@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .subscribe {
+            background: black;
+            color: white;
+            border: none;
+            margin: 10px;
+            padding: 10px;
+            border-radius: 20px;
+            font-weight: 700;
+            cursor: pointer;
+
+        }
+        .bts {
+            background: rgb(240,240,240);
+            color: black;
+        }
+        .style {
+            background: transparent;
+            padding: 10px;
+            font-size: 15px;
+            outline: none;
+        }
+        .calculate {
+            background: green;
+            font-size: 15px;
+            color: white;
+            padding: 12px 15px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <p>Youtube Subscribe Button</p>
+    <button class="btn subscribe">Subscribe</button>
+
+
+    <p>Amazon Shipping Calculator</p>
+
+    <input type="text" placeholder="Cost of Order" class="inputCost style" onkeydown="
+    handleCostKeydown(event);
+    
+    ">
+    <button class="calculate" onclick="
+    calculateTotal();
+    ">Calculate</button>
+
+    <p class="js-total"></p>
+
+
+
+    <script>
+
+        function handleCostKeydown (event) {
+            // console.log(event);
+            if (event.key === 'Escape' || 'Enter') {
+                calculateTotal();
+            }
+
+        }
+        const buttonElement = document.querySelector('.btn');
+
+        buttonElement.addEventListener('click', function() {
+
+            if (buttonElement.innerText === 'Subscribe'){
+                buttonElement.innerHTML = 'Subscribed';
+                buttonElement.classList.add('bts')
+            } else {
+                buttonElement.innerHTML = 'Subscribe';
+                buttonElement.classList.remove('bts')
+            }
+            // buttonElement.textContent = 'Subscribed';
+            // console.log(buttonElement.innerText)
+        });
+
+
+
+        function calculateTotal() {
+           const inputElement = document.querySelector('.inputCost');
+        //    inputElement.classList.add('style');
+
+           let cost = Number(inputElement.value);
+
+           if (cost < 40) {
+            cost = Number(cost) + 10;
+           }
+
+           document.querySelector('.js-total').innerHTML = `$${cost}`;
+        }
+
+        const moses = {
+            fullName: 'Allan Smith',
+            mass: 85,
+            height: 1.57,
+            calcBMI: function() {
+                return Math.round(this.mass / this.height ** 2)
+            }
+        }
+        console.log(moses.calcBMI())
+        
+        const uzu = {
+            fullName: 'John Walker',
+            mass: 65,
+            height: 1.37,
+            calcBMI: function() {
+                return Math.round(this.mass / this.height ** 2)
+            }
+        }
+        console.log(uzu.calcBMI())
+
+        
+            if (uzu.calcBMI() > moses.calcBMI()) {
+            console.log(`${uzu.fullName}'s  BMI (${uzu.calcBMI()}) is higher than ${moses.fullName}'s  BMI (${moses.calcBMI()})`) }
+        else  if (uzu.calcBMI() > moses.calcBMI ()) { 
+                console.log(`${uzu.fullName}'s  BMI (${uzu.calcBMI()}) is higher than ${moses.fullName}'s  BMI (${moses.calcBMI()})`) 
+            }
+
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+        background: black;
+        color: white;
+        font-size: 20px;
+        }
+        .hidden {
+            display: none;
+        }
+        .error {
+            color: red;
+        }
+        .inputCost {
+            background: transparent;
+            padding: 10px;
+            font-size: 15px;
+            outline: none;
+            color: white;
+            border: 2px solid white;
+        }
+        .calculateCost {
+            background: green;
+            font-size: 15px;
+            color: white;
+            padding: 12px 15px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <input  class="inputCost " placeholder="Cost of Order">
+        <button class="calculateCost calculateButton" >Evaluate</button>
+        <p class="error hidden">Error: Cost cannot be less than $0</p>
+        <p class="outputText"></p>
+
+    </section>
+
+
+    <script>
+        const inputElement = document.querySelector('.inputCost');
+        let buttonElement = document.querySelector('.calculateCost');
+        const textElement = document.querySelector('.outputText');
+        const errorText = document.querySelector('.hidden');
+     
+
+        buttonElement.addEventListener('click', function() {
+            buttonElement = Number(inputElement.value);
+
+            if (buttonElement < 0) {
+               errorText.classList.remove('hidden');
+            return;
+        }
+            if (buttonElement < 40) {
+                buttonElement = buttonElement + 10;    
+                errorText.classList.add('hidden');        
+            } 
+            errorText.classList.add('hidden');
+            textElement.textContent =`$${buttonElement}`;
+        });
+
+
+        // calculator
+        
+
+
+  
+
+
+    </script>
+</body>
+</html>

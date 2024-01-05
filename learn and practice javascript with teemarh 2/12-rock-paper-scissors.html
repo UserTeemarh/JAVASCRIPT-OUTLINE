@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DocumentRock Paper Scissors</title>
+    <style>
+        body {
+            background-color: rgb(25,25,25)
+            ;
+            color: white;
+            font-family: arial;
+        }
+        .title {
+            font-size: 30px;
+            font-weight: bold;
+        }
+        .move-icon {
+            height: 50px;
+
+        }
+        .move-button {
+            background-color: transparent;
+            border: 3px solid white;
+            padding: 20px;
+            border-radius: 50%;
+            cursor: pointer;
+            margin: 10px;
+        }
+        .js-result {
+            font-size: 25px;
+            font-weight: bold;
+            margin-top: 50px;
+        }
+        .score {
+            margin-top: 60px;
+        }
+        .reset-score-button,
+        .auto-play-button {
+            background-color: white;
+            border: none;
+            font-size: 15px;
+            padding: 20px;
+        }
+        
+    </style>
+<body>
+    <p class="title">Rock Paper Scissors</p>
+    <p>
+        <!-- Rock  -->
+        <button class="move-button js-rock-button" 
+        ><img src="/img/rock-emoji.png" alt="" class="move-icon"></button>
+
+
+
+        <!-- Paper -->
+        <button  class="move-button js-paper-button" 
+        ><img src="/img/paper-emoji.png" alt="" class="move-icon"></button>
+
+
+
+        <!-- Scissors -->
+        <button class="move-button js-scissors-button"
+        ><img src="/img/scissors-emoji.png" alt="" class="move-icon"></button>
+
+        <p class="js-result">
+        </p>
+        <p class="js-move">
+        </p>
+
+        <p class="text score">
+
+        </p>
+
+
+        <!-- Reset score -->
+        <button  class="reset-score-button reset-score">Reset Score</button>
+
+
+        <button class="auto-play-button autoplay">Auto Play</button>
+    </p>
+
+    <script src="12-dom-rock-paper-scissors.js"></script>
+        
+</body>
+</html>

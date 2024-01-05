@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced function</title>
+</head>
+<body>
+    <h1><center>ADVANCED FUNCTION</center></h1>
+
+
+
+
+
+
+    <script>
+        // Advantages of declaration function
+        /* easier to read
+            Hoisting:  */
+       /*     greeting();
+        function greeting() {
+            console.log('hello')
+        }
+
+        greeting();
+
+
+
+        const num = 2;
+// Annonymous Function
+        const function1 = function() {
+            console.log('hola')
+        }
+        console.log(function1());
+        console.log(typeof function1());
+
+
+        // Method function
+
+        const object1 = {
+            num: 2,
+            fun: function() {
+                console.log('hello3')
+            }
+        }
+        console.log(object1.fun());
+
+        function display(param) {
+            console.log(param);
+        }
+        display(2);
+
+        function run(param) {
+            param();
+        }
+        run(function (){
+            console.log('hello4')
+        });
+
+       
+        */
+        /*  setTimeout() method: allows us to run a function in the future
+            setTimeout takes two parameter */
+
+        // setTimeout(function(){
+        //     console.log('Timeout');
+        //     console.log('Timeout2')
+        // }, 3000);
+
+        // console.log('next line')
+
+
+        /* Asynchronous Code: allows you to execute operations without waiting for them to finish before moving on to the next task. 
+                    Advantage of Asynchronous code:
+                        It doesn't block our code for 3 seconds
+        
+            Synchronous Code: allows you to execute operation that will wait for one line to finish before moving on to the next task*/
+
+
+            /* setInterval(): It  is used to repeatedly execute a specified function or code block at fixed time intervals
+            takes two parameter */ 
+        /*    setInterval(function() {
+                console.log('Interval');
+            }, 3000);
+
+            console.log('Next Line'); 
+            */
+
+            // clearInterval() is used for stopping setInterval();
+
+// to loop through an array
+            [
+                'make dinner',
+                'wash dishes',
+                'watch youtube'
+            ].forEach(function(value, i) {
+
+                if (value === 'wash dishes') {
+                    return;
+                }
+                console.log(value);
+                console.log(i);
+            })
+    
+    </script>
+</body>
+</html>

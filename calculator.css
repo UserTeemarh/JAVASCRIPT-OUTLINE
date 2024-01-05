@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    color: white;
+}
+main {
+    width: 35%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+    padding: 15px;
+    border-radius: 10px 10px;
+    /* position: relative;
+    overflow: hidden; */
+     /* -webkit-box-reflect: below 2px;  */
+}
+main::before {
+    content: '';
+    position: absolute;
+    width: 19.5%;
+    height: 25%;
+    background: grey;
+    border-radius: 50%;
+    bottom: 20%;
+    right: 35%;
+    filter: blur(20px);
+    /* animation-delay: 4s;
+    animation: animate 2s linear infinite; */
+}
+main::after {
+    content: '';
+    position: absolute;
+    top: 20%;
+    left: 35%;
+    width: 17.5%;
+    height: 25%;
+    background: orange;
+    animation: animate 5s linear infinite;
+    filter: blur(20px);
+    border-radius: 50%;
+}
+/* @keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+    
+} */
+.showCalculator {
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    margin: 10px 10px;
+    /* position: relative;
+    right: 5rem; */
+}
+h1 {
+    position: relative;
+    bottom: 10rem;
+}
+.border{
+    position: relative;
+    z-index: 5;
+    background: rgba(94, 93, 93,0.1);
+    border-radius: 10px;
+    width: 120%;
+    height: 120%;
+    padding: 20px 20px;
+    display: flex;
+    justify-content: center;
+    box-shadow: 24.5rem 24.5rem 37rem rgba(19, 16, 16, 0.5), -24.5rem -24.5rem 37rem rgba(0, 0, 0, 0.5);
+    align-items: center;
+    flex-direction: column;
+}
+button {
+    z-index: 1;
+    /* width: fit-content;
+    height: fit-content; */
+    color: white;
+    padding: 20px;
+    border-radius: 60%;
+    margin: 5px;
+    font-family: 'Times New Roman', Times, serif;
+    border: none;
+    color: black;
+    outline: none;
+    text-align: center;
+    font-size: 20px;
+    box-shadow: 4.5rem 4.5rem 7rem rgba(0, 0, 0, 0.5), -4.5rem -4.5rem 7rem rgba(0, 0, 0, 0.5);
+}
+.clear {
+    border-radius: 8px;
+    margin-top: 8px;
+    padding: 10px 10px;
+    position: relative;
+    right: 5rem;
+    background-color: orange;
+    box-shadow: 4.5rem 4.5rem 7rem rgba(0, 0, 0, 0.5), -4.5rem -4.5rem 7rem rgba(0, 0, 0, 0.5);
+}
+.btn-gray {
+    background-color: gray;
+    color: white;
+}
+.btn-orange {
+    background-color: orange;
+    color: white;
+}

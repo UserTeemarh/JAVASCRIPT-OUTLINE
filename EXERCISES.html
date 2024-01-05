@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXERCISES___ OBJECT</title>
+</head>
+<body>
+    <h1>EXERCISES</h1>
+    <p>
+        <button onclick="
+       updateCalculation(' 1 ')
+            "
+        >1</button>
+        <button
+        onclick="
+       updateCalculation(' 2 ')
+        ">2</button>
+          <button
+          onclick="
+    
+         updateCalculation(' 3 ')
+          ">3</button>
+              <button
+              onclick="
+        
+             updateCalculation(' + ')
+              ">+</button>
+    <p>
+        <button onclick="
+       updateCalculation(' 4 ')
+            "
+        >4</button>
+        <button onclick="
+       updateCalculation(' 5 ')
+            "
+        >5</button>
+        <button onclick="
+       updateCalculation(' 6 ')
+            "
+        >6</button>
+        <button onclick="
+       updateCalculation(' - ')
+            ">-</button>
+    </p>
+    <p>
+        <button onclick="
+       updateCalculation(' 7 ')
+            ">7</button>
+        <button onclick="
+       updateCalculation(' 8 ')
+            ">8</button>
+        <button onclick="
+       updateCalculation(' 9 ')
+            ">9</button>
+        <button onclick="
+       updateCalculation(' * ')
+            ">*</button>
+    </p>
+    <p>
+        <button onclick="
+       updateCalculation(' 0 ')
+            ">0</button>
+            <button onclick="
+           updateCalculation(' . ')
+                ">.</button>
+                <button onclick="
+             
+               updateCalculation(eval(calculation));
+               console.log(calculation);
+
+               localStorage.getItem('calculation');
+                    ">=</button>
+                    <button onclick="
+                   updateCalculation(' / ' )
+                        ">/</button>
+    </p>
+    <p>
+        <button onclick="
+       calculation = '';
+       console.log(calculation);
+       localStorage.setItem(' calculation', calculation)
+            ">clear</button>
+    </p>
+
+
+    <p>
+        <button onclick=" 
+        playGame('Heads')
+            ">Heads</button>
+        <button onclick="
+        playGame('Tails')
+        ">Tails</button>
+    </p>
+    <button onclick="
+    scoreObject.wins = 0;
+    scoreObject.losses = 0;
+    "> reset score
+
+    </button>
+
+
+
+
+     <script>
+        console.log(localStorage.getItem('save'))
+
+        console.log(localStorage.setItem('save', 'Save'));
+
+        // const scoreObject = JSON.parse(localStorage.getItem( 'scoreObject')) || {
+        //     wins: 0,
+        //     losses: 0
+        // };
+        const scoreObject = JSON.parse(localStorage.getItem('scoreObject')) ||  {
+            wins: 0,
+            losses: 0
+        }
+        // const scoreObject = {
+        //     wins: 0,
+        //     losses: 0
+        // }
+       
+
+
+        function playGame(guess) {
+            // if (guess === 'Heads') {
+            //     console.log('Heads')
+            // } else if (guess === 'Tails') {
+            //     console.log('Tails')
+            // }
+            const randomeNumber = Math.random();
+            const result = randomeNumber < 0.5 ? 'Heads' : 'Tails';
+
+            console.log(guess === result ? 'You win' : 'You lose');
+            console.log(randomeNumber);
+            console.log(guess)
+
+
+            if (guess === result) {
+                scoreObject.wins += 1;
+            } else {
+                scoreObject.losses += 1;
+            }
+            console.log(scoreObject);
+            localStorage.setItem('scoreObject', JSON.stringify(scoreObject))
+            alert (`Wins ${scoreObject.wins}, Losses ${scoreObject.losses}`);
+
+
+
+        }
+        const basketball = {
+            price: 2095
+        }
+        console.log(basketball.price);
+
+
+        console.log(basketball.price + 500);
+
+        basketball['delivery-time'] = '3 Days'
+        console.log(basketball);
+
+
+    function comparePrice(product1, product2){
+        if (product1.price < product2.price) {
+            return product1
+        } else {
+            return product2
+        }
+    }
+
+    const product1 = {
+        price: 20,
+        name: 'Bag'
+    }
+    const product2 = {
+        price: 50,
+        name: 'Shoe'
+    }
+    console.log(comparePrice(product1, product2));
+
+
+    function isSameProduct(product3, product4) {
+        if (product3.name === product4.name && product4.price === product4.price) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    const product3 = {
+            name: 'Vestido',
+            price: 500
+    }
+
+    const product4 = {
+            name: 'Vestido',
+            price: 500
+    }
+    console.log(isSameProduct(product3,product4));
+
+    console.log('BUENOS DIAS'.toLowerCase());
+
+
+    console.log('Muchas Gracias'.repeat(2));
+    const multiply = 'Muchas'.repeat(3);
+    console.log('hello'.trim(3))
+
+
+// calculator
+let calculation = localStorage.getItem('calculation') || '';
+
+function updateCalculation (value) {
+     calculation += value;
+    
+    localStorage.setItem('calculation', calculation)
+    console.log(calculation);
+}
+
+
+
+
+     </script>
+</body>
+</html>

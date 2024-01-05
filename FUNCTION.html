@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FUNCTION</title>
+</head>
+<body>
+    <h1><center>FUNCTION</center></h1>
+
+<!-- EXERCISES -->
+<p><i>CALCULATOR</i></p>
+<p>
+    <button onclick="
+   updateCalculation(' 1 ')
+        "
+    >1</button>
+    <button
+    onclick="
+   updateCalculation(' 2 ')
+    ">2</button>
+      <button
+      onclick="
+
+     updateCalculation(' 3 ')
+      ">3</button>
+          <button
+          onclick="
+    
+         updateCalculation(' + ')
+          ">+</button>
+<p>
+    <button onclick="
+   updateCalculation(' 4 ')
+        "
+    >4</button>
+    <button onclick="
+   updateCalculation(' 5 ')
+        "
+    >5</button>
+    <button onclick="
+   updateCalculation(' 6 ')
+        "
+    >6</button>
+    <button onclick="
+   updateCalculation(' - ')
+        ">-</button>
+</p>
+<p>
+    <button onclick="
+   updateCalculation(' 7 ')
+        ">7</button>
+    <button onclick="
+   updateCalculation(' 8 ')
+        ">8</button>
+    <button onclick="
+   updateCalculation(' 9 ')
+        ">9</button>
+    <button onclick="
+   updateCalculation(' * ')
+        ">*</button>
+</p>
+<p>
+    <button onclick="
+   updateCalculation(' 0 ')
+        ">0</button>
+        <button onclick="
+       updateCalculation(' . ')
+            ">.</button>
+            <button onclick="
+         
+           updateCalculation(eval(calculation));
+           console.log(calculation)
+                ">=</button>
+                <button onclick="
+               updateCalculation(' / ' )
+                    ">/</button>
+</p>
+<p>
+    <button onclick="
+   calculation = '';
+   console.log(calculation)
+        ">clear</button>
+</p>
+
+
+    <!-- EXERCISES -->
+
+
+
+
+    <!-- <button onclick="
+            const guessNumber =Math.round( Math.random() * 6);
+
+            const ternary = guessNumber === 4 ? true : false;
+            console.log(ternary);
+            console.log(guessNumber)
+    ">
+        click me
+    </button> -->
+
+    <!-- truthy and falsy  -->
+    <!-- CHALLENGE EXERCISES -->
+    <fieldset>
+    <h3>CHALLENGE EXERCISES</h3>
+    <button onclick="
+    updateCartQuantity(cartQuantity);
+    ">
+        Show Quantity
+    </button>
+    <button onclick="
+    updateCartQuantity(1)
+    
+    ">Add to cart</button>
+    <button onclick="
+    updateCartQuantity(2)
+    ">+2</button>
+    <button onclick="
+    updateCartQuantity(3)
+    "> +3
+
+    </button>
+    <button onclick="
+    updateCartQuantity(4)
+    "> +4
+
+    </button>
+    <button onclick="
+    updateCartQuantity(5)
+    "> +5
+
+    </button>
+    <p>
+        <button onclick="
+    updateCartQuantity(-1)
+    
+    ">Remove from cart</button>
+    <button onclick="
+    updateCartQuantity(-2)
+    ">-2</button>
+    <button onclick="
+    updateCartQuantity(-3)
+    "> -3
+
+    </button>
+    <button onclick="
+    updateCartQuantity(-4)
+    "> -4
+
+    </button>
+    <button onclick="
+    updateCartQuantity(-5)
+    "> -5
+
+    </button>
+    </p>
+    <p>
+        <button onclick="
+        cartQuantity = 0;
+        console.log('Cart is Reset');
+        console.log(`Cart Quantity: ${cartQuantity}`)
+            ">Reset Cart</button>
+    </p>
+
+
+
+
+
+    <script>  
+    let cartQuantity = 0;
+    function updateCartQuantity (input) {
+        if (cartQuantity + input > 10) {
+            console.log('Çart is full');
+            return;
+        } else if (cartQuantity + input < 0 ) {
+            console.log('Not enough items in the Cart');
+            return;
+        } else {
+            cartQuantity += input;
+            console.log(`Cart Quantity: ${cartQuantity}`)
+        }
+    }
+
+
+
+        let calculation = '';
+
+        function updateCalculation (value) {
+             calculation += value;
+            console.log(calculation);
+        }
+        function calculateTax() {
+            return 1000 * 0.1;
+        }
+        console.log(calculateTax())
+
+
+
+        function calcAge(cost =  5, item) {
+            return `The cost is $${cost} and the total items are ${item}`
+        }
+        console.log(calcAge(20, 5))
+        console.log(calcAge(500,90));
+
+        //  EXERCISES
+        function greet () {
+            console.log('Hola! Buenos Dias Mi Amor');
+        }
+        console.log(greet());
+
+        function greet (name) {
+            console.log(`Hola! ${name} `);
+        }
+        console.log(greet('Simon'));
+
+        
+        function greet (name) {
+            console.log(`Hola! ${name} `);
+        }
+        console.log(greet());
+
+
+        function convertToFahrenheit(celcius) {
+            return (celcius * 9 / 5) + 32
+        }
+        console.log(convertToFahrenheit(25));
+
+        function convertToCelcius(fahrenheit) {
+            return (fahrenheit - 32) * 5 / 9;
+        }
+        console.log(convertToCelcius(86));
+
+
+        function convertTemperature(degrees, unit) {
+            const C = convertToFahrenheit (degrees);
+            const F = convertToCelcius(unit);
+            return ` ${C}C, ${F}F` 
+        }
+        console.log(convertTemperature(25,86));
+
+
+
+
+
+
+    </script>
+
+</body>
+</html>

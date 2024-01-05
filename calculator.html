@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="calculator.css">
+    <title>CALCULATOR</title>
+</head>
+<body>
+    <h1><center>GLASSMOPHORIC CALCULATOR</center></h1>
+    <main>
+        <div class="border">
+            <p class="showCalculator calculate"></p>
+    <section>
+        <button onclick="updateCalculator(' 1 ')" class="btn-gray">1</button>
+        <button onclick="updateCalculator(' 2 ')"  class="btn-gray">2</button>
+        <button onclick="updateCalculator(' 3 ')" class="btn-gray">3</button>
+        <button  onclick="updateCalculator(' + ')" class="btn-orange">+</button>
+    </section>
+    <section>
+        <button onclick="updateCalculator(' 4 ')" class="btn-gray">4</button>
+        <button onclick="updateCalculator(' 5 ')" class="btn-gray">5</button>
+        <button onclick="updateCalculator(' 6 ')" class="btn-gray">6</button>
+        <button onclick="updateCalculator(' - ')" class="btn-orange">-</button>
+    </section>
+    <section>
+        <button onclick="updateCalculator(' 7 ')" class="btn-gray">7</button>
+        <button onclick="updateCalculator(' 8 ')" class="btn-gray">8</button>
+        <button onclick="updateCalculator(' 9 ')" class="btn-gray">9</button>
+        <button onclick="updateCalculator(' * ')" class="btn-orange">*</button>
+    </section>
+    <section>
+        <button onclick="updateCalculator(' 0 ')" class="btn-gray">0</button>
+        <button onclick="updateCalculator(' . ')" class="btn-gray">.</button>
+        <button 
+        onclick="
+        updateCalculator(` =  ${eval(calculator)}`);
+        console.log(calculator)
+        "
+         class="btn-gray">=</button>
+        <button onclick="updateCalculator(' / ')" class="btn-orange"> /</button>
+    </section>
+    <button 
+    onclick="
+    calculator('');
+    console.log()
+    "
+     class="btn-orange clear">clear</button>
+</div>
+    </main>
+
+    <script src="/calculator.js"></script>
+</body>
+</html>

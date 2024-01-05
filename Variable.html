@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VARIABLES</title>
+</head>
+<body>
+    <h1><center>VARIABLES</center></h1>
+    <p>Cart Quantity</p>
+    <button onclick="
+        console.log(`Cart Quantity: ${cartQuantity}`)
+
+    ">Show Quantity</button>
+
+
+    <button onclick="
+    cartQuantity++;
+    console.log(`Cart Quantity: ${cartQuantity}`)
+    "
+    >Add to Cart</button>
+
+
+    <button 
+    onclick="
+    cartQuantity = + 2;
+console.log(`Cart Quantity: ${cartQuantity}`)
+    "
+    >+2</button>
+
+    <button
+    onclick="
+    cartQuantity = cartQuantity + 3;
+console.log(`Cart Quantity: ${cartQuantity}`)
+    "
+    >+3</button>
+
+    <button Onclick="
+    cartQuantity = 0;
+    console.log(`Cart was Reset `);
+    console.log(`Cart Quantity: ${cartQuantity}`);
+    ">Reset cart</button>
+
+<h3>EXERCISES</h3>
+    <!-- EXERCISES -->
+<p>
+<button onclick="
+cartQuantity += 4;
+console.log(`Cart Quantity: ${cartQuantity}`)
+"
+>+4</button>
+<button
+onclick="
+cartQuantity += 5;
+console.log(`Cart Quantity: ${cartQuantity}`)
+"
+>+5</button>
+
+<button  onclick="
+cartQuantity--;
+console.log(`Cart Quantity: ${cartQuantity}`)
+"
+>Remove from Cart</button>
+<button 
+onclick="
+cartQuantity -= 2;
+console.log(`Cart Quantity: ${cartQuantity}`)
+"
+>-2</button>
+
+<button   
+onclick="
+cartQuantity -= 3;
+console.log(`Cart Quantity: ${cartQuantity}`)
+"
+>-3</button>
+</p>
+<h3>CODING CHALLLENGE</h3>
+<p><i>CALCULATOR</i></p>
+<p>
+    <button onclick="
+    calculation += ' 1 ';
+    console.log(calculation);
+        "
+    >1</button>
+    <button
+    onclick="
+    calcualation += ' 2 ';
+    console.log(calculation);
+    ">2</button>
+      <button
+      onclick="
+      calculation += ' 3 ';
+      console.log(calculation);
+      ">3</button>
+          <button
+          onclick="
+          calculation += ' + ';
+          console.log(calculation);
+          ">+</button>
+<p>
+    <button onclick="
+    calculation += ' 4 ';
+    console.log(calculation);
+        "
+    >4</button>
+    <button onclick="
+    calculation += ' 5 ';
+    console.log(calculation);
+        "
+    >5</button>
+    <button onclick="
+    calculation += ' 6 ';
+    console.log(calculation);
+        "
+    >6</button>
+    <button onclick="
+    calculation += ' - ';
+    console.log(calculation);
+        ">-</button>
+</p>
+<p>
+    <button onclick="
+    calculation += ' 7 ';
+    console.log(calculation);
+        ">7</button>
+    <button onclick="
+    calculation += ' 8 ';
+    console.log(calculation);
+        ">8</button>
+    <button onclick="
+    calculation += ' 9 ';
+    console.log(calculation);
+        ">9</button>
+    <button onclick="
+    calculation += ' * ';
+    console.log(calculation);
+        ">*</button>
+</p>
+<p>
+    <button onclick="
+    calculation += ' 0 ';
+    console.log(calculation);
+        ">0</button>
+        <button onclick="
+        calculation += ' . ';
+        console.log(calculation);
+            ">.</button>
+            <button onclick="
+            calculation = eval(calculation);
+            console.log(calculation);
+                ">=</button>
+                <button onclick="
+                calculation += ' / ';
+                console.log(calculation);
+                    ">/</button>
+</p>
+<p>
+    <button onclick="
+    calculation = '  ';
+    console.log(calculation);
+        ">clear</button>
+</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        
+
+        let calculation = '';
+        let cartQuantity = 0;
+
+        // Exercises 
+
+        let name = 'Fatimah';
+        console.log(`My name is ${name}`);
+
+        let cost = 5 + (2 * 3) + 9;
+         console.log(`Cost of Food: $${cost}`);
+
+         let costPercent = cost * 0.1;
+         console.log(`Tax (10%): $${costPercent}`);
+
+         let totalCost = cost + costPercent;
+         console.log(`Total cost: $${totalCost}`);
+
+
+
+    </script>
+</body>
+</html>
